@@ -30,7 +30,10 @@ const PromptPreview = ({ prompt }) => {
           <pre className="prompt-text">{prompt}</pre>
         ) : (
           <div className="empty-prompt">
-            <p>💡 Completa los campos del formulario para ver tu prompt aquí</p>
+            <div className="empty-prompt-content">
+              <span className="empty-icon">💡</span>
+              <p>Completa los campos del formulario para ver tu prompt aquí</p>
+            </div>
           </div>
         )}
       </div>

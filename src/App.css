@@ -11,9 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #f8fafc;
   min-height: 100vh;
-  color: #333;
+  color: #1a202c;
 }
 
 /* Contenedor principal */
@@ -26,20 +26,20 @@ body {
 .app-header {
   text-align: center;
   margin-bottom: 40px;
-  color: white;
+  color: #2d3748;
 }
 
 .app-header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  color: #1a202c;
 }
 
 .app-header p {
   font-size: 1.2rem;
-  opacity: 0.9;
-  font-weight: 300;
+  color: #4a5568;
+  font-weight: 400;
 }
 
 /* Contenedor principal */
@@ -47,23 +47,25 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  border: 1px solid #e2e8f0;
 }
 
 /* Mode Switcher */
 .mode-switcher {
   padding: 30px;
-  background: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .mode-switcher h2 {
   text-align: center;
   margin-bottom: 30px;
-  color: #495057;
+  color: #2d3748;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .mode-buttons {
@@ -78,26 +80,27 @@ body {
   align-items: center;
   gap: 15px;
   padding: 20px 25px;
-  border: 2px solid #e9ecef;
-  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
   background: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   min-width: 280px;
   text-align: left;
+  color: #2d3748;
 }
 
 .mode-button:hover {
-  border-color: #667eea;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+  border-color: #4299e1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.15);
 }
 
 .mode-button.active {
-  border-color: #667eea;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-color: #4299e1;
+  background: #4299e1;
   color: white;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.25);
 }
 
 .mode-icon {
@@ -109,11 +112,14 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
+  color: #2d3748;
 }
 
 .mode-info p {
   font-size: 0.9rem;
-  opacity: 0.8;
+  opacity: 1;
+  font-weight: 500;
+  color: #4a5568;
 }
 
 /* Contenedor de formularios */
@@ -130,13 +136,14 @@ body {
 
 .rap-form h2,
 .crisp-form h2 {
-  color: #495057;
+  color: #2d3748;
   margin-bottom: 10px;
   font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .form-description {
-  color: #6c757d;
+  color: #4a5568;
   margin-bottom: 30px;
   font-size: 1rem;
   line-height: 1.5;
@@ -149,16 +156,16 @@ body {
 }
 
 .form-field {
-  background: #f8f9fa;
+  background: #f7fafc;
   padding: 20px;
-  border-radius: 12px;
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.2s ease;
 }
 
 .form-field:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.1);
+  border-color: #4299e1;
+  box-shadow: 0 2px 8px rgba(66, 153, 225, 0.1);
 }
 
 .form-field label {
@@ -168,7 +175,7 @@ body {
   margin-bottom: 8px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #495057;
+  color: #2d3748;
 }
 
 .field-icon {
@@ -176,7 +183,7 @@ body {
 }
 
 .field-description {
-  color: #6c757d;
+  color: #4a5568;
   font-size: 0.9rem;
   margin-bottom: 12px;
   line-height: 1.4;
@@ -185,31 +192,34 @@ body {
 .form-field textarea {
   width: 100%;
   padding: 15px;
-  border: 2px solid #e9ecef;
+  border: 2px solid #e2e8f0;
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.5;
   resize: vertical;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.2s ease;
   background: white;
+  color: #2d3748;
 }
 
 .form-field textarea:focus {
   outline: none;
-  border-color: #667eea;
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
 }
 
 .form-field textarea::placeholder {
-  color: #adb5bd;
+  color: #4a5568;
+  font-weight: 400;
+  opacity: 0.8;
 }
 
 /* Prompt Preview */
 .prompt-preview {
   padding: 30px;
-  background: #f8f9fa;
-  border-top: 1px solid #e9ecef;
+  background: #f7fafc;
+  border-top: 1px solid #e2e8f0;
 }
 
 .preview-header {
@@ -222,12 +232,13 @@ body {
 }
 
 .preview-header h2 {
-  color: #495057;
+  color: #2d3748;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .copy-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #4299e1;
   color: white;
   border: none;
   padding: 12px 20px;
@@ -235,26 +246,29 @@ body {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .copy-button:hover:not(:disabled) {
+  background: #3182ce;
   transform: translateY(-1px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 12px rgba(66, 153, 225, 0.25);
 }
 
 .copy-button:disabled {
-  opacity: 0.5;
+  background: #a0aec0;
   cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .preview-content {
   background: white;
-  border: 2px solid #e9ecef;
-  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
   min-height: 200px;
   overflow: hidden;
 }
@@ -267,7 +281,7 @@ body {
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #495057;
+  color: #2d3748;
   background: white;
   min-height: 200px;
   display: flex;
@@ -279,8 +293,30 @@ body {
   align-items: center;
   justify-content: center;
   height: 200px;
-  color: #adb5bd;
+  color: #4a5568;
   font-style: italic;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.empty-prompt-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+.empty-prompt p {
+  margin: 0;
+  color: #4a5568;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 .prompt-stats {
@@ -288,7 +324,7 @@ body {
   gap: 20px;
   margin-top: 15px;
   font-size: 0.9rem;
-  color: #6c757d;
+  color: #4a5568;
   flex-wrap: wrap;
 }
 
