@@ -4,6 +4,8 @@
 
 EasyPrompt es una aplicación web moderna que te permite construir prompts perfectos para modelos de lenguaje como GPT usando dos frameworks estructurados: **RAP** (modo simple) y **CRISP** (modo avanzado).
 
+https://afreireo.github.io/EasyPrompt/
+
 ## Características
 
 ### 🧩 Modo Simple (RAP Framework)
