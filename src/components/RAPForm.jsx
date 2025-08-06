@@ -23,7 +23,7 @@ const RAPForm = ({ fields, onFieldChange }) => {
             id="role"
             value={fields.role}
             onChange={(e) => handleChange('role', e.target.value)}
-            placeholder="Ej: Eres un experto en marketing digital con 10 años de experiencia..."
+            placeholder="Ej: Eres un desarrollador senior con 8 años de experiencia en React, JavaScript y desarrollo web..."
             rows={3}
           />
         </div>
@@ -38,7 +38,7 @@ const RAPForm = ({ fields, onFieldChange }) => {
             id="audience"
             value={fields.audience}
             onChange={(e) => handleChange('audience', e.target.value)}
-            placeholder="Ej: Para un emprendedor principiante que quiere lanzar su primera campaña..."
+            placeholder="Ej: Para un desarrollador junior que está aprendiendo React y necesita ayuda con hooks..."
             rows={3}
           />
         </div>
@@ -53,7 +53,7 @@ const RAPForm = ({ fields, onFieldChange }) => {
             id="purpose"
             value={fields.purpose}
             onChange={(e) => handleChange('purpose', e.target.value)}
-            placeholder="Ej: Crear una estrategia de marketing digital paso a paso..."
+            placeholder="Ej: Explicar cómo usar useState y useEffect con ejemplos prácticos y mejores prácticas..."
             rows={3}
           />
         </div>

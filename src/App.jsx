@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <h1>🧠 EasyPrompt</h1>
+        <h1>💡 EasyPrompt</h1>
         <p>Construye prompts perfectos para modelos de lenguaje</p>
       </header>
       
