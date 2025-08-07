@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import ModeSwitcher from './components/ModeSwitcher'
 import RAPForm from './components/RAPForm'
 import CRISPForm from './components/CRISPForm'
 import PromptPreview from './components/PromptPreview'
-import { buildRAPPrompt, buildCRISPPrompt } from './components/PromptBuilder'
+import PromptTechniques from './components/PromptTechniques'
+import { buildRAPPrompt, buildCRISPPrompt, applyPromptTechnique } from './components/PromptBuilder'
 
 function App() {
   const [mode, setMode] = useState('RAP') // 'RAP' o 'CRISP'
+  const [currentPrompt, setCurrentPrompt] = useState('')
+  const [selectedTechniques, setSelectedTechniques] = useState([])
   
   // Estado para el modo RAP
   const [rapFields, setRapFields] = useState({
@@ -43,12 +46,31 @@ function App() {
 
   // Generar el prompt basado en el modo actual
   const generatePrompt = () => {
+    let prompt = ''
+    
     if (mode === 'RAP') {
-      return buildRAPPrompt(rapFields)
+      prompt = buildRAPPrompt(rapFields)
+      console.log('RAP Fields:', rapFields)
+      console.log('Generated RAP Prompt:', prompt)
     } else {
-      return buildCRISPPrompt(crispFields)
+      prompt = buildCRISPPrompt(crispFields)
+      console.log('CRISP Fields:', crispFields)
+      console.log('Generated CRISP Prompt:', prompt)
     }
+    
+    // Aplicar técnicas seleccionadas
+    selectedTechniques.forEach(technique => {
+      prompt = applyPromptTechnique(prompt, technique)
+    })
+    
+    return prompt
   }
+
+  // Actualizar el prompt cuando cambien los campos, el modo o las técnicas
+  useEffect(() => {
+    const newPrompt = generatePrompt()
+    setCurrentPrompt(newPrompt)
+  }, [mode, rapFields, crispFields, selectedTechniques])
 
   return (
     <div className="app">
@@ -77,7 +99,15 @@ function App() {
           )}
         </div>
         
-        <PromptPreview prompt={generatePrompt()} />
+        <PromptTechniques 
+          selectedTechniques={selectedTechniques}
+          onTechniqueChange={setSelectedTechniques}
+        />
+        
+        <PromptPreview 
+          prompt={currentPrompt} 
+          selectedTechniques={selectedTechniques}
+        />
       </main>
     </div>
   )
